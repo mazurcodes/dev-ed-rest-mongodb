@@ -15,7 +15,6 @@ router.get('/', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   const body = req.body;
   const post = new Posts(body);
-  console.log(body);
   try {
     await post.save();
     res.redirect('/posts');
